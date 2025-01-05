@@ -10,11 +10,13 @@ import {
 } from "@/components/ui/card"
 
 export default function Poem() {
-    const [poemHtml, setPoemHtml] = useState<string>("poeam static test");
+    const [poemHtml, setPoemHtml] = useState<string>("poem static test");
 
     useEffect(() => {
         const fetchHtmlContent = async () => {
-            const res = await fetch("https://quest.ms.mff.cuni.cz/edupo/prdel", {
+            // const url = "https://quest.ms.mff.cuni.cz/edupo/gen?metre=D&rhyme_scheme=ABBA&syllables_count=9&accept=txt";
+            const url = "https://quest.ms.mff.cuni.cz/edupo/prdel?accept=txt";
+            const res = await fetch(url, {
                 method: "GET",
                 headers: {
                   "Content-Type": "text/html",
@@ -27,11 +29,12 @@ export default function Poem() {
             }
             
             const html = await res.text();
-            setPoemHtml(html);
+            // setPoemHtml(html);
+            console.log(html);
         }
 
         // setPoemHtml("Test poem<br>test <b>123</b><br>test test");
-        // fetchHtmlContent();
+        fetchHtmlContent();
     }, []);
 
     return (
@@ -43,7 +46,10 @@ export default function Poem() {
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <p dangerouslySetInnerHTML={{ __html: poemHtml }} />
+                    <p>
+                        { poemHtml }
+                    </p>
+                    { /* <p dangerouslySetInnerHTML={{ __html: poemHtml }} /> */ }
                 </CardContent>
                 <CardFooter>
                     <p>

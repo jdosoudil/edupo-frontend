@@ -7,7 +7,7 @@ export default function Footer() {
                 O aplikaci
             </Link>
             <h4>
-                Built with ❤️ on React/Next.js
+                Built with ❤️ on React/Next.js with Payload
             </h4>
         </footer>
     )
