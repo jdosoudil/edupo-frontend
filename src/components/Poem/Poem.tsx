@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card"
 
 export default function Poem() {
-    const [poemHtml, setPoemHtml] = useState<string>("poem static test");
+    const [poemHtml, setPoemHtml] = useState<string>("poem static test prdel");
 
     useEffect(() => {
         const fetchHtmlContent = async () => {

@@ -13,6 +13,47 @@ h1 {
 
 @layer base {
   :root {
+    /* UK colors */
+    --cardinal-red: #d22d40;
+    --university-blue: #003657;
+
+    /* EduPo colors */
+    --crimson-red: #e11d48;
+    
+    --red-dark: #dc2626;
+    --red-middle: #fca5a5;
+    --red-soft: #fecaca;
+    --red-supersoft: #ffefef;
+
+    --blue-dark: #0284c7;
+    --blue-middle: #7dd3fc;
+    --blue-soft: #bae6fd;
+    --blue-supersoft: #eaf7fe;
+
+    --slate-dark: #475569;
+    --slate-middle: #cbd5e1;
+    --slate-soft: #e2e8f0;
+
+    --green-dark: #059669;
+    --green-middle: #6ee7b7;
+    --green-soft: #a7f3d0;
+    --green-supersoft: #e4fbf1;
+
+    --yellow-dark: #CA8A04;
+    --yellow-middle: #FDE047;
+    --yellow-soft: #fef08a;
+    --yellow-supersoft: #fffadc;
+
+    --gray-dark: #3f3f46;
+    --gray-middle: #52525b;
+    --gray-soft: #71717a;
+    --gray-supersoft: #848485;
+
+    --silver-middle: #e4e4e7;
+    --silver-soft: #f4f4f5;
+
+    --black: #09090b;
+
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

@@ -15,6 +15,42 @@ export default {
 			'desktop': '1024px',
 		},
   		colors: {
+			crimsonRed: 'var(--crimson-red)',
+    
+			redDark: 'var(--red-dark)',
+			redMiddle: 'var(--red-middle)',
+			redSoft: 'var(--red-soft)',
+			redSupersoft: 'var(--red-supersoft)',
+		
+			blueDark: 'var(--blue-dark)',
+			blueMiddle: 'var(--blue-middle)',
+			blueSoft: 'var(--blue-soft)',
+			blueSupersoft: 'var(--blue-supersoft)',
+		
+			slateDark: 'var(--slate-dark)',
+			slateMiddle: 'var(--slate-middle)',
+			slateSoft: 'var(--slate-soft)',
+		
+			greenDark: 'var(--green-dark)',
+			greenMiddle: 'var(--green-middle)',
+			greenSoft: 'var(--green-soft)',
+			greenSupersoft: 'var(--green-supersoft)',
+		
+			yellowDark: 'var(--yellow-dark)',
+			yellowMiddle: 'var(--yellow-middle)',
+			yellowSoft: 'var(--yellow-soft)',
+			yellowSupersoft: 'var(--yellow-supersoft)',
+		
+			grayDark: 'var(--gray-dark)',
+			grayMiddle: 'var(--gray-middle)',
+			graySoft: 'var(--gray-soft)',
+			graySupersoft: 'var(--gray-supersoft)',
+		
+			silverMiddle: 'var(--silver-middle)',
+			silverSoft: 'var(--silver-soft)',
+		
+			black: 'var(--black)',
+
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
   			sidebar: {
@@ -28,6 +64,9 @@ export default {
   				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
+		backgroundImage: {
+			'uk-pattern': "url('/svg/uk-pattern.svg')",
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

@@ -3,6 +3,8 @@ import metadata from "@/data/metadata.json";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import { Roboto } from 'next/font/google'
+
 import { SidebarProvider } from "@/components/ui/sidebar"
 import AppSidebar from "@/components/AppSidebar";
 
@@ -12,6 +14,7 @@ import Footer from "@/components/Footer";
 
 export const pageMetadata: Metadata = metadata;
 
+/*
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -23,8 +26,13 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+*/
 
-const fullWidthCls = "";
+const roboto = Roboto({
+  subsets: ['latin-ext'],
+  weight: ["300", "500", "700"],
+  display: 'swap',
+})
 
 export default function RootLayout({
   children,
@@ -32,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fullWidthCls}`}>
-      <body className={`${fullWidthCls} ${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en">
+      <body className={`${roboto.className} font-light w-full h-screen bg-uk-pattern bg-repeat antialiased`}>
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />
           <div className="w-full flex flex-col">
