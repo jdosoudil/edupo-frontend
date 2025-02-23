@@ -30,26 +30,18 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
  
-const frameworks = [
+const authors = [
   {
-    value: "next.js",
-    label: "Next.js",
+    value: "Karel Jaromír Erben",
+    label: "Karel Jaromír Erben",
   },
   {
-    value: "sveltekit",
-    label: "SvelteKit",
+    value: "Ján Kollár",
+    label: "Ján Kollár",
   },
   {
-    value: "nuxt.js",
-    label: "Nuxt.js",
-  },
-  {
-    value: "remix",
-    label: "Remix",
-  },
-  {
-    value: "astro",
-    label: "Astro",
+    value: "Jaroslav Vrchlický",
+    label: "Jaroslav Vrchlický",
   },
 ];
  
@@ -58,7 +50,7 @@ export default function Header() {
     const [value, setValue] = React.useState("");
 
     return (
-        <header className="w-full bg-crimsonRed flex gap-6 justify-between items-center flex-wrap px-2 tablet:px-6 py-2 text-white">
+        <header className="w-full bg-crimsonRed flex gap-6 justify-between items-center flex-wrap px-docOffsetXSmall tablet:px-docOffsetXBig py-docOffsetY text-white">
 
             <Link href="/">
                 <h1>
@@ -75,7 +67,7 @@ export default function Header() {
                     className="w-[260px] justify-between text-black"
                     >
                     {value
-                        ? frameworks.find((framework) => framework.value === value)?.label
+                        ? authors.find((author) => author.value === value)?.label
                         : "Načti předpřipravenou ukázku"}
                     <ChevronsUpDown className="opacity-50" />
                     </Button>
@@ -86,20 +78,20 @@ export default function Header() {
                     <CommandList>
                         <CommandEmpty>Nic nenalezeno.</CommandEmpty>
                         <CommandGroup>
-                        {frameworks.map((framework) => (
+                        {authors.map((author) => (
                             <CommandItem
-                            key={framework.value}
-                            value={framework.value}
+                            key={author.value}
+                            value={author.value}
                             onSelect={(currentValue) => {
                                 setValue(currentValue === value ? "" : currentValue)
                                 setOpen(false)
                             }}
                             >
-                            {framework.label}
+                            {author.label}
                             <Check
                                 className={cn(
                                 "ml-auto",
-                                value === framework.value ? "opacity-100" : "opacity-0"
+                                value === author.value ? "opacity-100" : "opacity-0"
                                 )}
                             />
                             </CommandItem>

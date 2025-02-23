@@ -14,6 +14,11 @@ export default {
 			'tablet': '768px',
 			'desktop': '1024px',
 		},
+		spacing: {
+			docOffsetXBig: '2rem',
+			docOffsetXSmall: '0.5rem',
+			docOffsetY: '0.5rem',
+		},
   		colors: {
 			crimsonRed: 'var(--crimson-red)',
     

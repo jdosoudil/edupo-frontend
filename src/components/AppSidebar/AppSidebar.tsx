@@ -24,7 +24,7 @@ const items = [
 
 export default function AppSidebar() {
     return (
-        <Sidebar variant="floating">
+        <Sidebar variant="inset">
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarGroupContent>

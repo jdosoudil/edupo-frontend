@@ -38,7 +38,7 @@ export default function Poem() {
     }, []);
 
     return (
-        <div className="w-full max-w-[650px]">
+        <div className="w-full">
             <Card>
                 <CardHeader>
                     <CardTitle>

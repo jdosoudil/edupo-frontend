@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import metadata from "@/data/metadata.json";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
 
 import { Roboto } from 'next/font/google'
 
-import { SidebarProvider } from "@/components/ui/sidebar"
-import AppSidebar from "@/components/AppSidebar";
+// import { SidebarProvider } from "@/components/ui/sidebar"
+// import AppSidebar from "@/components/AppSidebar";
 
 import Header from "@/components/Header";
 import Main from "@/components/Main";
@@ -41,17 +41,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} font-light w-full h-screen bg-uk-pattern bg-repeat antialiased`}>
-        <SidebarProvider defaultOpen={false}>
-          <AppSidebar />
-          <div className="w-full flex flex-col">
-            <Header />
-            <Main>
-              { children }
-            </Main>
-            <Footer />
-          </div>
-        </SidebarProvider>
+      <body className={`${roboto.className} font-light w-full flex flex-col min-h-screen bg-uk-pattern bg-repeat antialiased`}>
+        <Header />
+        <Main cls="flex-1 grid">
+          { children }
+        </Main>
+        <Footer />
       </body>
     </html>
   );

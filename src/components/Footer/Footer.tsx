@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Footer() {
     return (
-        <footer className="mt-auto w-full flex flex-wrap justify-end items-center gap-6 px-2 tablet:px-6 py-4 border-t">
+        <footer className="mt-auto w-full flex flex-wrap justify-end items-center gap-6 px-docOffsetXSmall tablet:px-docOffsetXBig py-docOffsetY border-t bg-white">
             <Link className="underline" href={"/credits"}>
                 O aplikaci
             </Link>
