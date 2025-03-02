@@ -4,7 +4,7 @@ import ImageParams from "@/components/ImageParams";
 
 export default function Sidebar() {
   return (
-    <div className="w-[400px] px-docOffsetXSmall tablet:px-docOffsetXBig py-4 bg-white border-l">
+    <div className="w-[700px] px-docOffsetXSmall tablet:px-docOffsetXBig py-4 bg-white border-l">
       <Tabs defaultValue="poem" className="w-full">
         <TabsList className="w-full">
           <TabsTrigger value="poem" className="w-1/2">Báseň</TabsTrigger>

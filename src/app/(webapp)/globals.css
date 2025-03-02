@@ -30,6 +30,8 @@ h1 {
     --blue-soft: #bae6fd;
     --blue-supersoft: #eaf7fe;
 
+    --blue-charcoal: #334155;
+
     --slate-dark: #475569;
     --slate-middle: #cbd5e1;
     --slate-soft: #e2e8f0;
@@ -38,6 +40,8 @@ h1 {
     --green-middle: #6ee7b7;
     --green-soft: #a7f3d0;
     --green-supersoft: #e4fbf1;
+
+    --lime: #22C55E;
 
     --yellow-dark: #CA8A04;
     --yellow-middle: #FDE047;

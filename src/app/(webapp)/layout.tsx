@@ -3,7 +3,7 @@ import metadata from "@/data/metadata.json";
 // import localFont from "next/font/local";
 import "./globals.css";
 
-import { Roboto } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 // import { SidebarProvider } from "@/components/ui/sidebar"
 // import AppSidebar from "@/components/AppSidebar";
@@ -28,9 +28,9 @@ const geistMono = localFont({
 });
 */
 
-const roboto = Roboto({
+const roboto = Inter({
   subsets: ['latin-ext'],
-  weight: ["300", "500", "700"],
+  weight: ["300", "400", "500", "700"],
   display: 'swap',
 })
 
