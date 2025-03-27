@@ -54,7 +54,7 @@ export default function Header() {
 
             <Link href="/">
                 <h1>
-                    EduPo
+                    EduPo 123
                 </h1>
             </Link>
  
