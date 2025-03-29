@@ -7,8 +7,18 @@ body {
 }
 
 h1 {
-  font-size: xx-large;
-  font-weight: bolder;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 @layer base {
@@ -54,9 +64,13 @@ h1 {
     --gray-supersoft: #848485;
 
     --silver-middle: #e4e4e7;
-    --silver-soft: #f4f4f5;
+    --silver-soft: #f4f4f4;
+    --silver-transparent: #A1A1AA33;
+
+    --creamy: #fafafa;
 
     --black: #09090b;
+    --black-soft: #3f3f46;
 
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;

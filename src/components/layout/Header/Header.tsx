@@ -3,33 +3,14 @@
 import { cn } from "@/lib/utils"
 import Link from "next/link";
 
+import { crimsonPro } from "@/app/(webapp)/fonts";
+
 import * as React from "react";
-import {
-    Link as LinkIcon,
-    QrCode,
-    Check,
-    ChevronsUpDown 
-} from "lucide-react";
- 
-import {
-    Button
-} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
+import { Link as LinkIcon, QrCode, Check, ChevronsUpDown } from "lucide-react";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command";
-
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
- 
 const authors = [
   {
     value: "Karel Jaromír Erben",
@@ -52,12 +33,22 @@ export default function Header() {
     return (
         <header className="w-full bg-crimsonRed flex gap-6 justify-between items-center flex-wrap px-docOffsetXSmall tablet:px-docOffsetXBig py-docOffsetY text-white">
 
-            <Link href="/">
-                <h1>
-                    EduPo 123 test
-                </h1>
-            </Link>
- 
+            <div className="flex flex-row items-center gap-3">
+                <Link href={process.env.NEXT_PUBLIC_LINK_BASE ? process.env.NEXT_PUBLIC_LINK_BASE : "/"}>
+                    <div className={crimsonPro.className + " pr-3 text-3xl font-bold border-r-2 border-white"}>
+                        EduPo
+                    </div>
+                </Link>
+    
+                <Link href="https://cuni.cz" target="_blank">
+                    <img src="/svg/logo-uk.svg" alt="Logo UK" className="w-8 h-8" />
+                </Link>
+                
+                <Link href="https://ucl.cas.cz/" target="_blank">
+                    <img src="/svg/logo-ucl.svg" alt="Logo ÚČL AV ČR" className="w-8 h-8" />
+                </Link>
+            </div>
+
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild>
                     <Button

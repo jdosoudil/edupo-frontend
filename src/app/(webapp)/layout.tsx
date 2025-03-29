@@ -1,38 +1,13 @@
 import type { Metadata } from "next";
 import metadata from "@/data/metadata.json";
-// import localFont from "next/font/local";
 import "./globals.css";
 
-import { Inter } from 'next/font/google'
+import { inter } from "./fonts";
 
-// import { SidebarProvider } from "@/components/ui/sidebar"
-// import AppSidebar from "@/components/AppSidebar";
-
-import Header from "@/components/Header";
-import Main from "@/components/Main";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Main from "@/components/layout/Main";
 
 export const pageMetadata: Metadata = metadata;
-
-/*
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-*/
-
-const roboto = Inter({
-  subsets: ['latin-ext'],
-  weight: ["300", "400", "500", "700"],
-  display: 'swap',
-})
 
 export default function RootLayout({
   children,
@@ -41,12 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} font-light w-full flex flex-col min-h-screen bg-uk-pattern bg-repeat antialiased`}>
+      <body className={`${inter.className} font-light w-full flex flex-col min-h-screen bg-uk-pattern bg-repeat antialiased`}>
         <Header />
         <Main cls="flex-1 grid">
           { children }
         </Main>
-        <Footer />
       </body>
     </html>
   );
