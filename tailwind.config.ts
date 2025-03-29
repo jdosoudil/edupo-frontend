@@ -15,7 +15,7 @@ export default {
   			desktop: '1024px'
   		},
   		spacing: {
-  			docOffsetXBig: '2rem',
+  			docOffsetXBig: '1.25rem',
   			docOffsetXSmall: '0.5rem',
   			docOffsetY: '0.5rem'
   		},
@@ -48,7 +48,10 @@ export default {
   			graySupersoft: 'var(--gray-supersoft)',
   			silverMiddle: 'var(--silver-middle)',
   			silverSoft: 'var(--silver-soft)',
+			silverTransparent: 'var(--silver-transparent)',
   			black: 'var(--black)',
+			blackSoft: 'var(--black-soft)',
+			creamy: 'var(--creamy)',
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
   			sidebar: {
@@ -63,7 +66,7 @@ export default {
   			}
   		},
   		backgroundImage: {
-  			'uk-pattern': 'url(/svg/uk-pattern.svg)'
+  			'uk-pattern': 'url(/svg/uk-pattern-patterned.svg)'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

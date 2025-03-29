@@ -1,5 +1,5 @@
 import { Switch } from "../../ui/switch";
-import Title from "./../Title";
+import Title from "../PoemTitle";
 
 export default function PoemSection({title, withSwitch, children } : { title: string; withSwitch: boolean; children?: React.ReactElement }) {
     const HEIGHT = 40;
